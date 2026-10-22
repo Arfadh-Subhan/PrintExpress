@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8FF">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D0FE1D"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Track Order"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#171717"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Order ID -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID"
+                android:textSize="14sp"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#12345"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Product Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product"
+                android:textSize="14sp"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Quantity & Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                    <TextView
+                        android:id="@+id/tvQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="16sp"
+                        android:textColor="#171717"
+                        android:padding="12dp"
+                        android:background="#FFFFFF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                    <TextView
+                        android:id="@+id/tvTotalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:padding="12dp"
+                        android:text="LKR 1000"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Delivery -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:textSize="14sp"
+                android:textColor="#888888" />
+
+            <TextView
+                android:id="@+id/tvDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pickup"
+                android:textSize="16sp"
+                android:textColor="#171717"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Status Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Status"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Status Message -->
+            <TextView
+                android:id="@+id/tvStatusMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your order has been placed!"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Timeline -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Step 1: Pending -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStep1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_step_pending"
+                        android:contentDescription="Step 1" />
+
+                    <TextView
+                        android:id="@+id/tvStep1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pending"
+                        android:textSize="16sp"
+                        android:textColor="#171717"
+                        android:paddingStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep1Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Divider Line -->
+                <View
+                    android:id="@+id/viewLine1"
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="11dp" />
+
+                <!-- Step 2: Processing -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStep2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_step_processing"
+                        android:contentDescription="Step 2" />
+
+                    <TextView
+                        android:id="@+id/tvStep2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Processing"
+                        android:textSize="16sp"
+                        android:textColor="#888888"
+                        android:paddingStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep2Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Divider Line -->
+                <View
+                    android:id="@+id/viewLine2"
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="11dp" />
+
+                <!-- Step 3: Printing -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStep3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_step_printing"
+                        android:contentDescription="Step 3" />
+
+                    <TextView
+                        android:id="@+id/tvStep3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Printing"
+                        android:textSize="16sp"
+                        android:textColor="#888888"
+                        android:paddingStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep3Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Divider Line -->
+                <View
+                    android:id="@+id/viewLine3"
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="11dp" />
+
+                <!-- Step 4: Ready -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStep4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_step_ready"
+                        android:contentDescription="Step 4" />
+
+                    <TextView
+                        android:id="@+id/tvStep4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ready"
+                        android:textSize="16sp"
+                        android:textColor="#888888"
+                        android:paddingStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep4Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Divider Line -->
+                <View
+                    android:id="@+id/viewLine4"
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginStart="11dp" />
+
+                <!-- Step 5: Completed -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStep5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_step_completed"
+                        android:contentDescription="Step 5" />
+
+                    <TextView
+                        android:id="@+id/tvStep5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Completed"
+                        android:textSize="16sp"
+                        android:textColor="#888888"
+                        android:paddingStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvStep5Status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Cancel Button (only shows if Pending) -->
+            <Button
+                android:id="@+id/btnCancelOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel Order"
+                android:padding="14dp"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
